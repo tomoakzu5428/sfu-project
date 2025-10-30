@@ -1,0 +1,642 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="ja"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;SFU事業開発資産の戦略的活用と次期活動方針&lt;/title&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Tailwind CSS CDN --&gt;&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Google Fonts: Noto Sans Japanese --&gt;&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&amp;display=swap" rel="stylesheet"&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Lucide Icons CDN --&gt;&lt;script src="https://unpkg.com/lucide@latest"&gt;&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// カスタムTailwind設定</p>
+<p class="p1"><span class="Apple-converted-space">        </span>tailwind.config = {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>theme: {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>extend: {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>colors: {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>// カスタムテーマカラーの定義</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>'tc-base': '#ffffff',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>'tc-main': '#164a5f',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>'tc-accent': '#dd4d35',</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>fontFamily: {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>// デフォルトフォントをNoto Sans JPに設定</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>sans: ['Noto Sans Japanese', 'sans-serif'],</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* プレゼンテーション全体の基本スタイル */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>/* プレゼンテーションが見やすいように背景色を設定 */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f3f4f6; /* bg-gray-100 */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* スライドコンテナ（16:9を維持） */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.slide-container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>/* Tailwindの 'aspect-[16/9]' クラスは、</p>
+<p class="p1"><span class="Apple-converted-space">              </span>このコンテナのアスペクト比を16:9に強制します。</p>
+<p class="p1"><span class="Apple-converted-space">            </span>*/</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 1280px; /* 最大幅の制御 */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 2rem auto; /* 中央揃えと上下マージン */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* スライダートラック</p>
+<p class="p1"><span class="Apple-converted-space">          </span>全スライドを内包し、translateXで移動する</p>
+<p class="p1"><span class="Apple-converted-space">        </span>*/</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.slider-track {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: transform 0.5s ease-in-out;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* 各スライド</p>
+<p class="p1"><span class="Apple-converted-space">          </span>トラック内で100%の幅を持つ</p>
+<p class="p1"><span class="Apple-converted-space">        </span>*/</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.slide {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex: 0 0 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow-y: auto; /* スライド内容が多い場合に備えてスクロールを許可 */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* スライド内の共通パディング */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.slide-content {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 4% 6%; /* 16:9比率に合わせたパディング */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* ナビゲーションボタン */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.nav-button {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>top: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-50%);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: rgba(22, 74, 95, 0.6); /* tc-main に透明度 */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 9999px; /* rounded-full */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 48px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 48px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: background-color 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>z-index: 10;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.nav-button:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: rgba(220, 77, 53, 0.8); /* tc-accent に透明度 */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.nav-button.prev {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>left: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.nav-button.next {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>right: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* インフォグラフィック用のカスタムスタイル */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.info-card {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f9fafb; /* bg-gray-50 */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-left: 5px solid #164a5f; /* border-l-4 border-tc-main */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 0.5rem; /* rounded-lg */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* shadow-md */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.accent-card {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-left-color: #dd4d35; /* border-tc-accent */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.highlight-box {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #fef2f2; /* bg-red-50 */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #dd4d35; /* border-tc-accent */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 0.5rem; /* rounded-lg */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;body class="font-sans antialiased"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- スライドコンテナ（16:9比率を維持） --&gt;&lt;div class="slide-container relative"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="aspect-[16/9] w-full bg-tc-base shadow-2xl rounded-lg overflow-hidden relative"&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- スライダートラック --&gt;&lt;div class="slider-track" id="slider"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- ===== スライド 1: タイトル ===== --&gt;&lt;div class="slide bg-tc-main text-tc-base flex items-center justify-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="slide-content text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>SFU事業開発資産の戦略的活用と&lt;br&gt;次期活動方針</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- ===== スライド 2: 現状の事業背景と制約 (修正: 1) ===== --&gt;&lt;div class="slide bg-tc-base"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="slide-content h-full flex flex-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2 class="text-3xl lg:text-4xl font-bold text-tc-main mb-6 lg:mb-10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>1. 現状の事業背景と制約</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="block text-xl font-normal text-gray-600 mt-2"&gt;（グループ長指示の確認）&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/h2&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                        </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex-grow grid md:grid-cols-2 gap-6 lg:gap-10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;!-- 2.1 事業環境と経営判断 (修正: 1.1) --&gt;&lt;div class="info-card accent-card flex flex-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h3 class="text-xl lg:text-2xl font-bold text-tc-accent mb-4 flex items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;i data-lucide="x-octagon" class="w-7 h-7 mr-3"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>1.1 事業環境と経営判断の共有</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="text-base lg:text-lg space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;strong class="text-tc-accent"&gt;グループ長指示:&lt;/strong&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>経営陣に対し「スポーツ領域の事業は見直し」として説明済み。</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;p class="font-bold p-4 bg-red-100 rounded-md text-red-800"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;strong class="block"&gt;制約:&lt;/strong&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>現時点で、スポーツ特化の新規事業企画の説明や稟議は極めて困難な状況にある。</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                            </span></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;!-- 2.2 我々の課題認識 (修正: 1.2) --&gt;&lt;div class="info-card flex flex-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h3 class="text-xl lg:text-2xl font-bold text-tc-main mb-4 flex items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;i data-lucide="target" class="w-7 h-7 mr-3"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>1.2 我々の課題認識</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="text-base lg:text-lg space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>PSF（Product-Solution Fit）まで進めた</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;strong class="text-tc-main"&gt;スポーツ領域の事業企画資産&lt;/strong&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>を完全にストップするのは機会損失が大きい。</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>経営判断の制約を遵守しつつ、既存資産（コンセプト、開発知見）を活かし</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;strong class="text-tc-main"&gt;活動の継続（ピボット）を模索&lt;/strong&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>する必要がある。</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- ===== スライド 3: 継続検討された選択肢と懸念点 (修正: 2) ===== --&gt;&lt;div class="slide bg-tc-base"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="slide-content h-full flex flex-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2 class="text-3xl lg:text-4xl font-bold text-tc-main mb-6 lg:mb-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>2. 継続検討された選択肢とその懸念点</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/h2&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                        </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;!-- 4つの選択肢カード --&gt;&lt;div class="grid grid-cols-2 lg:grid-cols-4 gap-4 flex-grow"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;!-- 1. 正攻法 --&gt;&lt;div class="info-card accent-card p-3 lg:p-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h4 class="text-lg lg:text-xl font-bold text-tc-main mb-2"&gt;1. 正攻法 (継続)&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-sm lg:text-base mb-3"&gt;スポーツ領域での企画推進 (現状の事業資産の直接活用)。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-sm lg:text-base font-bold text-tc-accent flex items-start"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;i data-lucide="alert-triangle" class="w-4 h-4 mr-2 mt-1 flex-shrink-0"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span&gt;経営判断の制約により、すぐに稟議・活動加速は不可能。&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;!-- 2. 観光サービスへピボット --&gt;&lt;div class="info-card accent-card p-3 lg:p-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h4 class="text-lg lg:text-xl font-bold text-tc-main mb-2"&gt;2. 観光サービスへピボット&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-sm lg:text-base mb-3"&gt;観光アプリの第二の矢として企画を再構築。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-sm lg:text-base font-bold text-tc-accent flex items-start"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;i data-lucide="alert-triangle" class="w-4 h-4 mr-2 mt-1 flex-shrink-0"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span&gt;CPFからのリスタートとなり、上期同等の時間・コストが必要。&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;!-- 3. CONFTの発展系 --&gt;&lt;div class="info-card accent-card p-3 lg:p-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h4 class="text-lg lg:text-xl font-bold text-tc-main mb-2"&gt;3. CONFTの発展系&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-sm lg:text-base mb-3"&gt;スポンサードPoCから収益化ビジネスへの転換。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-sm lg:text-base font-bold text-tc-accent flex items-start"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;i data-lucide="alert-triangle" class="w-4 h-4 mr-2 mt-1 flex-shrink-0"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span&gt;方向性決定は早くとも年末であり、下期SFU要員を全振りできない。&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;!-- 4. シン・みらい創造 --&gt;&lt;div class="info-card accent-card p-3 lg:p-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h4 class="text-lg lg:text-xl font-bold text-tc-main mb-2"&gt;4. シン・みらい創造&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-sm lg:text-base mb-3"&gt;業務外での活動として推進。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-sm lg:text-base font-bold text-tc-accent flex items-start"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;i data-lucide="alert-triangle" class="w-4 h-4 mr-2 mt-1 flex-shrink-0"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span&gt;本業の要員・リソース配分の問題が残る。&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                        </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;!-- 結論 --&gt;&lt;div class="mt-6 lg:mt-8 p-4 bg-tc-accent text-tc-base rounded-lg text-center shadow-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-lg lg:text-xl font-bold"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>結論：既存の選択肢では「すぐに事業資産を活かしつつ」「経営制約をクリア」する道筋がない。</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- ===== スライド 4: 新たな戦略的活動方針の提案 (修正: 3) ===== --&gt;&lt;div class="slide bg-tc-base"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="slide-content h-full flex flex-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2 class="text-3xl lg:text-4xl font-bold text-tc-main mb-6 lg:mb-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>3. 新たな戦略的活動方針の提案</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/h2&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                        </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;!-- ピボット戦略の図解 --&gt;&lt;div class="mb-6 lg:mb-8 p-4 bg-gray-50 rounded-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h3 class="text-xl lg:text-2xl font-bold text-tc-main mb-3"&gt;既存の知見を活かすピボット戦略&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="flex items-center justify-center space-x-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;!-- 元のアイデア --&gt;&lt;div class="text-center p-4 bg-gray-200 rounded-lg shadow-inner"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;p class="text-gray-500 font-bold text-lg"&gt;スポーツ領域&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;p class="text-gray-500 text-sm"&gt;（制約あり）&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;i data-lucide="arrow-right" class="w-10 h-10 text-tc-accent flex-shrink-0"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;!-- コアバリュー --&gt;&lt;div class="text-center p-4 border-2 border-tc-accent border-dashed rounded-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;p class="font-bold text-tc-main text-lg"&gt;コアバリュー&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;p class="text-tc-main text-sm"&gt;エンゲージメント向上による行動促進&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;i data-lucide="arrow-right" class="w-10 h-10 text-tc-accent flex-shrink-0"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;!-- 新しい文脈 --&gt;&lt;div class="text-center p-4 bg-tc-main text-tc-base rounded-lg shadow"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;p class="font-bold text-lg"&gt;観光・地域共創&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;p class="text-sm"&gt;（制約なし）&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;!-- 新しい選択肢の比較 --&gt;&lt;div class="flex-grow grid grid-cols-2 gap-6 lg:gap-10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;!-- A. logmint MVP --&gt;&lt;div class="info-card p-4 lg:p-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h4 class="text-lg lg:text-xl font-bold text-tc-main mb-3"&gt;A. logmint MVP内製開発&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-sm lg:text-base mb-4"&gt;当初案通り、内製で静かにプロダクトを開発。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-sm lg:text-base font-bold"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span class="text-gray-600"&gt;コスト・制約:&lt;/span&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>低(生成AIツールサブスク程度)。</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span class="text-tc-accent"&gt;ローンチタイミングの具体的な設定が困難。&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;!-- B. EngageLink for Tourism (推奨) --&gt;&lt;div class="relative info-card p-4 lg:p-6 border-4 border-tc-accent shadow-xl"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;span class="absolute -top-4 left-4 bg-tc-accent text-tc-base px-4 py-1 rounded-full font-bold text-sm shadow-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>推奨</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h4 class="text-lg lg:text-xl font-bold text-tc-main mb-3"&gt;B. EngageLink for Tourism プロトタイプ開発&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-sm lg:text-base mb-4"&gt;業界横断的なエンゲージメント向上策として汎用アプリを開発し、まずは観光分野でプロトタイプを確立。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-sm lg:text-base font-bold"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span class="text-gray-600"&gt;コスト・制約:&lt;/span&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>低(生成AIツールサブスク程度)。</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span class="text-tc-main"&gt;クイックにデモ/PoCが可能な資産構築。&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- ===== スライド 5: EngageLink for Tourism プロトタイプのコンセプト (修正: 4) ===== --&gt;&lt;div class="slide bg-tc-base"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="slide-content h-full flex flex-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2 class="text-3xl lg:text-4xl font-bold text-tc-main mb-6 lg:mb-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>4. EngageLink for Tourism プロトタイプのコンセプト</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/h2&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                        </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex-grow grid md:grid-cols-2 gap-6 lg:gap-10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;!-- 5.1 開発の目的と本部方針への合致 (修正: 4.1) --&gt;&lt;div class="info-card p-4 lg:p-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h3 class="text-xl lg:text-2xl font-bold text-tc-main mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>4.1 開発の目的と本部方針への合致</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;ul class="space-y-4 text-base lg:text-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;li class="flex items-start"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;i data-lucide="rocket" class="w-6 h-6 mr-3 text-tc-accent flex-shrink-0 mt-1"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;strong class="text-tc-main"&gt;クイック体験提供:&lt;/strong&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>Connexia本格導入前に、安価で周遊促進の効果を顧客に体験してもらうための</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;strong&gt;Lite版サービスのプロトタイプ&lt;/strong&gt;を開発。</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;li class="flex items-start"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;i data-lucide="check-circle-2" class="w-6 h-6 mr-3 text-tc-accent flex-shrink-0 mt-1"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;strong class="text-tc-main"&gt;本部方針への合致:&lt;/strong&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>開発プロセスにおいて、</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;strong&gt;生成AIを活用した開発および製品へのAI組み込み（API）の検証&lt;/strong&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>をスコープに入れ、技術ロードマップに貢献する。</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                            </span></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;!-- 5.2 開発アプリ概要 (修正: 4.2) --&gt;&lt;div class="info-card p-4 lg:p-6 bg-tc-main text-tc-base"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h3 class="text-xl lg:text-2xl font-bold text-white mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>4.2 開発アプリ概要</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="space-y-4 text-base lg:text-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;strong class="font-bold text-gray-300 block"&gt;コンセプト:&lt;/strong&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;p&gt;訪問者の周遊行動を促進し、各スポットの価値を最大化することで、多様なビジネスシーンにおける経済活性化に貢献するSaaS用アプリケーション。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;strong class="font-bold text-gray-300 block"&gt;コアバリュー:&lt;/strong&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;p class="text-yellow-300 font-bold"&gt;利用者のエンゲージメント向上 (発見体験、達成感、貢献実感の提供)。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;strong class="font-bold text-gray-300 block"&gt;ビジネスモデル:&lt;/strong&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;p&gt;B2B2Cを想定し、地域共創の&lt;strong&gt;「とっかかり(フック)」&lt;/strong&gt;サービスとしての位置付け。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- ===== スライド 6: EngageLink for Tourism の提供価値 (修正: 5) ===== --&gt;&lt;div class="slide bg-tc-base"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="slide-content h-full flex flex-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2 class="text-3xl lg:text-4xl font-bold text-tc-main mb-6 lg:mb-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>5. EngageLink for Tourism の提供価値</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/h2&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                        </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;!-- 解決する課題 --&gt;&lt;div class="highlight-box mb-6 lg:mb-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h3 class="text-xl lg:text-2xl font-bold text-tc-accent mb-3 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>解決する課題</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="flex justify-around text-base lg:text-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="flex items-center font-medium text-gray-800"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;i data-lucide="map-pin-off" class="w-5 h-5 mr-2 text-tc-accent"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>観光地の&lt;strong class="text-tc-accent mx-1"&gt;周遊不足&lt;/strong&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="flex items-center font-medium text-gray-800"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;i data-lucide="users" class="w-5 h-5 mr-2 text-tc-accent"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>特定スポットへの&lt;strong class="text-tc-accent mx-1"&gt;集中&lt;/strong&gt;（オーバーツーリズム）</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="flex items-center font-medium text-gray-800"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;i data-lucide="search-x" class="w-5 h-5 mr-2 text-tc-accent"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>未認知スポットへの&lt;strong class="text-tc-accent mx-1"&gt;送客不足&lt;/strong&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;!-- ステークホルダーへの提供価値 --&gt;&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h3 class="text-xl lg:text-2xl font-bold text-tc-main mb-4 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>ステークホルダーへの提供価値</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="grid md:grid-cols-3 gap-4 lg:gap-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;!-- 自治体・DMO・施設 --&gt;&lt;div class="info-card p-4 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;i data-lucide="building-2" class="w-12 h-12 text-tc-main mx-auto mb-3"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;h4 class="text-lg lg:text-xl font-bold text-tc-main mb-2"&gt;自治体・DMO・施設&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;p class="text-sm lg:text-base"&gt;周遊行動の可視化と最適化、混雑分散、未認知スポットへの送客。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;!-- 事業者(店舗など) --&gt;&lt;div class="info-card p-4 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;i data-lucide="store" class="w-12 h-12 text-tc-main mx-auto mb-3"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;h4 class="text-lg lg:text-xl font-bold text-tc-main mb-2"&gt;事業者(店舗など)&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;p class="text-sm lg:text-base"&gt;来店誘導とフィードバック取得、顧客体験の改善。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;!-- 参加者(利用者) --&gt;&lt;div class="info-card p-4 text-center bg-tc-main text-tc-base"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;i data-lucide="user-check" class="w-12 h-12 text-tc-base mx-auto mb-3"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;h4 class="text-lg lg:text-xl font-bold text-white mb-2"&gt;参加者(利用者)&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;p class="text-sm lg:text-base"&gt;&lt;strong class="text-yellow-300"&gt;「次は何があるか」&lt;/strong&gt;という発見体験の増幅、達成感・貢献実感の提供。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- ===== スライド 7: プロトタイプの機能要件と活動の進め方 (修正: 6) ===== --&gt;&lt;div class="slide bg-tc-base"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="slide-content h-full flex flex-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2 class="text-3xl lg:text-4xl font-bold text-tc-main mb-6 lg:mb-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>6. プロトタイプの機能要件と活動の進め方</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/h2&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                        </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex-grow grid md:grid-cols-2 gap-6 lg:gap-10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;!-- 7.1 プロトタイプ要件 (修正: 6.1) --&gt;&lt;div class="info-card p-4 lg:p-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h3 class="text-xl lg:text-2xl font-bold text-tc-main mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>6.1 プロトタイプ要件</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span class="block text-base font-normal text-gray-600"&gt;（過去PoC資産の汎用化）&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="space-y-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;div class="flex items-center text-base lg:text-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;i data-lucide="layout-template" class="w-6 h-6 mr-3 text-tc-main flex-shrink-0"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;div&gt;&lt;strong class="text-tc-main"&gt;周遊促進テンプレート:&lt;/strong&gt; 周遊ビンゴ、スタンプラリー、謎解きラリー&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;div class="flex items-center text-base lg:text-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;i data-lucide="settings-2" class="w-6 h-6 mr-3 text-tc-main flex-shrink-0"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;div&gt;&lt;strong class="text-tc-main"&gt;UI/ルール設定:&lt;/strong&gt; タイトル、カラー、難易度、特典ルール等のクイックカスタマイズ&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;div class="flex items-center text-base lg:text-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;i data-lucide="app-window" class="w-6 h-6 mr-3 text-tc-main flex-shrink-0"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;div&gt;&lt;strong class="text-tc-main"&gt;アウトプット:&lt;/strong&gt; Webアプリケーション生成機能 (デモで即利用可能)&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;div class="flex items-center text-base lg:text-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;i data-lucide="bar-chart-3" class="w-6 h-6 mr-3 text-tc-main flex-shrink-0"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;div&gt;&lt;strong class="text-tc-main"&gt;データ:&lt;/strong&gt; アナリティクス機能 (周遊状況、達成率などの基礎データ)&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                            </span></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;!-- 7.2 活動の進め方とリソース (修正: 6.2) --&gt;&lt;div class="info-card accent-card p-4 lg:p-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h3 class="text-xl lg:text-2xl font-bold text-tc-accent mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>6.2 活動の進め方とリソース</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;ul class="space-y-4 text-base lg:text-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;li class="flex items-start"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;i data-lucide="users" class="w-6 h-6 mr-3 text-tc-accent flex-shrink-0 mt-1"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;strong class="text-gray-700"&gt;開発体制:&lt;/strong&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>SFU要員による&lt;strong class="text-tc-main"&gt;内製での粛々とした開発&lt;/strong&gt;。</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;li class="flex items-start"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;i data-lucide="dollar-sign" class="w-6 h-6 mr-3 text-tc-accent flex-shrink-0 mt-1"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;strong class="text-gray-700"&gt;コスト:&lt;/strong&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>主に生成AIツールのサブスクリプション費用に限定（低コスト）。</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;li class="flex items-start"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;i data-lucide="goal" class="w-6 h-6 mr-3 text-tc-accent flex-shrink-0 mt-1"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;strong class="text-gray-700"&gt;目標:&lt;/strong&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>下期中に&lt;strong class="text-tc-main"&gt;観光ユースケース&lt;/strong&gt;に当て込んだプロトタイプを完成させる。</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- ===== スライド 8: 結論：次期活動のコミットメント (修正: 7) ===== --&gt;&lt;div class="slide bg-tc-main text-tc-base"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="slide-content h-full flex flex-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2 class="text-3xl lg:text-4xl font-bold text-white mb-6 lg:mb-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>7. 結論：次期活動のコミットメント</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/h2&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                        </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="grid md:grid-cols-2 gap-6 lg:gap-10 mb-6 lg:mb-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;!-- 8.1 スポーツ領域 (修正: 7.1) --&gt;&lt;div class="p-4 bg-tc-base text-tc-main rounded-lg shadow"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h3 class="text-xl lg:text-2xl font-bold text-gray-500 mb-3 flex items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;i data-lucide="archive" class="w-7 h-7 mr-3"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>7.1 スポーツ領域の事業企画</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;ul class="list-disc list-inside space-y-2 text-base lg:text-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;li&gt;PSFまでの結果を踏まえて&lt;strong class="text-gray-700"&gt;企画書を修正・棚上げ&lt;/strong&gt;するまでに留める。&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;li class="font-bold text-tc-accent"&gt;新たな事業企画は提出せず、経営判断の制約を遵守する。&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                            </span></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;!-- 8.2 SFUの下期主要活動 (修正: 7.2) --&gt;&lt;div class="p-4 bg-tc-base text-tc-main rounded-lg shadow-xl border-t-4 border-tc-accent"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;h3 class="text-xl lg:text-2xl font-bold text-tc-main mb-3 flex items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;i data-lucide="focus" class="w-7 h-7 mr-3 text-tc-accent"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>7.2 SFUの下期主要活動（観光ピボット）</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;ul class="list-disc list-inside space-y-2 text-base lg:text-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;li&gt;スポーツ領域のコアアイデアを、&lt;strong class="text-tc-main"&gt;観光文脈にアジャストしたストーリー&lt;/strong&gt;を立案。&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;li&gt;そのストーリーに即した&lt;strong class="text-tc-main"&gt;汎用型アプリ（EngageLink for Tourism）のプロトタイプ開発&lt;/strong&gt;にリソースを集中。&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;!-- サマリーテーブル --&gt;&lt;div class="flex-grow"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="overflow-x-auto"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;table class="w-full text-left bg-tc-base text-tc-main rounded-lg shadow-lg overflow-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;thead class="bg-gray-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;th class="p-3 lg:p-4 text-sm lg:text-base font-bold uppercase"&gt;Activity&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;th class="p-3 lg:p-4 text-sm lg:text-base font-bold uppercase"&gt;Status&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;th class="p-3 lg:p-4 text-sm lg:text-base font-bold uppercase"&gt;Goal&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;tr class="border-b border-gray-200"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;td class="p-3 lg:p-4 text-base lg:text-lg font-medium"&gt;スポーツ事業&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;td class="p-3 lg:p-4 text-base lg:text-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm font-medium"&gt;企画書修正・棚上げ&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;td class="p-3 lg:p-4 text-base lg:text-lg"&gt;既存資産の保全&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;tr class="border-b border-gray-200"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;td class="p-3 lg:p-4 text-base lg:text-lg font-medium"&gt;観光プロトタイプ開発&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;td class="p-3 lg:p-4 text-base lg:text-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;span class="px-3 py-1 bg-tc-accent text-tc-base rounded-full text-sm font-bold"&gt;リソース集中、内製開発&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;td class="p-3 lg:p-4 text-base lg:text-lg font-bold text-tc-accent"&gt;クイックな市場導入資産の獲得&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;td class="p-3 lg:p-4 text-base lg:text-lg font-medium"&gt;AI検証&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;td class="p-3 lg:p-4 text-base lg:text-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                                </span>&lt;span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"&gt;プロトタイプに組み込み&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                            </span>&lt;td class="p-3 lg:p-4 text-base lg:text-lg"&gt;本部方針への技術貢献&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt; &lt;!-- .slider-track --&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- ナビゲーションボタン --&gt;&lt;button id="prevBtn" class="nav-button prev"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;i data-lucide="arrow-left"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button id="nextBtn" class="nav-button next"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;i data-lucide="arrow-right"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/button&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- ページネーション（ドット） --&gt;&lt;div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10" id="pagination"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- ドットはJSで生成されます --&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.addEventListener('DOMContentLoaded', function() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Lucide Iconsの初期化</p>
+<p class="p1"><span class="Apple-converted-space">            </span>lucide.createIcons();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const slider = document.getElementById('slider');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const slides = document.querySelectorAll('.slide');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const prevBtn = document.getElementById('prevBtn');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const nextBtn = document.getElementById('nextBtn');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const pagination = document.getElementById('pagination');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const totalSlides = slides.length;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let currentSlide = 0;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// ページネーションドットの生成</p>
+<p class="p1"><span class="Apple-converted-space">            </span>for (let i = 0; i &lt; totalSlides; i++) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const dot = document.createElement('button');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>dot.classList.add('w-3', 'h-3', 'rounded-full', 'transition-all', 'duration-300', 'cursor-pointer');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>dot.classList.add(i === 0 ? 'bg-tc-accent' : 'bg-gray-400', 'hover:bg-tc-accent');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>dot.dataset.slide = i;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>pagination.appendChild(dot);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const dots = document.querySelectorAll('#pagination button');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// スライド表示関数</p>
+<p class="p1"><span class="Apple-converted-space">            </span>function showSlide(slideIndex) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>// インデックスの境界チェック</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (slideIndex &gt;= totalSlides) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>slideIndex = 0;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>} else if (slideIndex &lt; 0) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>slideIndex = totalSlides - 1;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// スライダーの移動</p>
+<p class="p1"><span class="Apple-converted-space">                </span>slider.style.transform = `translateX(-${slideIndex * 100}%)`;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>currentSlide = slideIndex;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// ページネーションの更新</p>
+<p class="p1"><span class="Apple-converted-space">                </span>updatePagination();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// ページネーションのドットのアクティブ状態を更新</p>
+<p class="p1"><span class="Apple-converted-space">            </span>function updatePagination() {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>dots.forEach((dot, index) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if (index === currentSlide) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>dot.classList.remove('bg-gray-400');</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>dot.classList.add('bg-tc-accent', 'w-5'); // アクティブなドットを少し大きくする</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>dot.classList.add('bg-gray-400');</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>dot.classList.remove('bg-tc-accent', 'w-5');</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>dot.classList.add('w-3');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// イベントリスナー</p>
+<p class="p1"><span class="Apple-converted-space">            </span>nextBtn.addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>showSlide(currentSlide + 1);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>prevBtn.addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>showSlide(currentSlide - 1);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>dots.forEach(dot =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>dot.addEventListener('click', (e) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>showSlide(parseInt(e.target.dataset.slide));</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// キーボード操作（左右矢印キー）</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.addEventListener('keydown', (e) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (e.key === 'ArrowRight') {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>showSlide(currentSlide + 1);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>} else if (e.key === 'ArrowLeft') {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>showSlide(currentSlide - 1);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// 初期スライドの表示</p>
+<p class="p1"><span class="Apple-converted-space">            </span>showSlide(currentSlide);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+<p class="p2"><br></p>
+</body>
+</html>
